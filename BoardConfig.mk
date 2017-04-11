@@ -69,28 +69,19 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Recovery
-#RECOVERY_VARIANT := carliv
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/recovery/init.qcom.rc
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/recovery.fstab
 
-#BOARD_USE_CUSTOM_RECOVERY_FONT := \"font_20x43.h\"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"fontcn46_28x73.h\"
 DEVICE_RESOLUTION := 1080x1920
 DEVICE_SCREEN_WIDTH := 1080
 DEVICE_SCREEN_HEIGHT := 1920
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
-# EGL settings
-BOARD_EGL_CFG := $(LOCAL_PATH)/egl.cfg
-USE_OPENGL_RENDERER := true
-BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
-TARGET_DISABLE_TRIPLE_BUFFERING := false
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 #BOARD_CUSTOM_GRAPHICS := ../../../device/nubia/nx529j/recovery/graphics.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/nubia/nx529j/recovery/graphics_cn.c
-#BOARD_CUSTOM_GRAPHICS := ../../../device/nubia/nx529j/recovery/graphics.cwmt.c
-#BOARD_CUSTOM_GRAPHICS := ../../../device/nubia/nx529j/recovery/graphics.cwm.c
 
 #使用虚拟按键
 RECOVERY_USE_VIRTUAL_KEY := true
